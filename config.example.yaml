@@ -1,0 +1,27 @@
+clients:
+  - id: ffffffff # placeholder
+telemetry:
+  id: Telemetry
+  key: AQ== # placeholder
+imports:
+  - region: EU_868
+    remote: LongFast
+    local: LongFast
+mappings:
+  - state: Scotland
+    value: Scot
+    replace_full: True
+mqtt:
+  local:
+    address: example.com
+    port: 1883
+    username: meshtastic
+    password: changeme
+  remote:
+    address: mqtt.meshtastic.org
+    port: 1883
+    username: meshdev
+    password: large4cats
+    subscriptions:
+      - msh/EU_868/2/e/#
+      - msh/Scot/2/e/#
